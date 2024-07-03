@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 0;
+        }
+        nav {
+            margin: 20px;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        footer {
+            background-color: #ff69b4;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz Cumpleaños, Mi Amor</h1>
+    </header>
+    <nav>
+        <a href="#" onclick="showContent('carta')">Carta de Cumpleaños</a>
+        <a href="#" onclick="showContent('video')">Video Especial</a>
+        <a href="#" onclick="showContent('sorpresa1')">Sorpresa 1</a>
+        <a href="#" onclick="showContent('sorpresa2')">Sorpresa 2</a>
+    </nav>
+    <div class="content">
+        <div id="carta" class="hidden">
+            <h2>Carta de Cumpleaños</h2>
+            <p>Aquí puedes escribir tu carta de cumpleaños...</p>
+            <!-- Edita esta sección con tu carta -->
+        </div>
+        <div id="video" class="hidden">
+            <h2>Video Especial</h2>
+            <video controls>
+                <source src="ruta-al-video.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+        <div id="sorpresa1" class="hidden">
+            <h2>Sorpresa 1</h2>
+            <p>Contenido especial de la primera sorpresa...</p>
+            <!-- Edita esta sección con contenido sorpresa -->
+        </div>
+        <div id="sorpresa2" class="hidden">
+            <h2>Sorpresa 2</h2>
+            <p>Contenido especial de la segunda sorpresa...</p>
+            <!-- Edita esta sección con contenido sorpresa -->
+        </div>
+    </div>
+    <footer>
+        <p>Con todo mi amor, [Tu Nombre]</p>
+    </footer>
+
+    <script>
+        function showContent(id) {
+            const sections = document.querySelectorAll('.content > div');
+            sections.forEach(section => section.classList.add('hidden'));
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
